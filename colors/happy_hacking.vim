@@ -361,10 +361,6 @@ hi! link typescriptLogicSymbols Operator
 hi! link typescriptIdentifier   Keyword
 hi! link typescriptExceptions   Keyword
 
-" Treesitter Context
-hi! link TreesitterContext Pmenu
-hi TreesitterContextBottom gui=underline cterm=underline
-
 " Vimscript
 hi! link vimGroup        Constant
 hi! link vimHiGroup      Constant
