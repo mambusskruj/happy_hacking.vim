@@ -167,6 +167,12 @@ hi! NonText guifg=bg
 hi! link coffeeRegex        Regexp
 hi! link coffeeSpecialIdent Directory
 
+" Conflict Marker
+hi! link ConflictMarkerBegin DiffAdd
+hi! link ConflictMarkerEnd DiffText
+hi! link ConflictMarkerOurs DiffAdd
+hi! link ConflictMarkerTheirs DiffText
+
 " CSS
 hi! link cssIdentifier Title
 hi! link cssClassName  Directory
@@ -199,12 +205,27 @@ hi! link DiffAdd    diffAdded
 hi! link DiffDelete diffRemoved
 hi! link DiffText   diffLine
 
+" Dirvish
+hi! link DirvishArg Search
+hi DirvishPathTail guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=bold cterm=bold
+
 " Dot (GraphViz)
 hi! link dotKeyChar Normal
 
 " Git commits
 hi! link gitCommitSummary  String
 hi! link gitCommitOverflow ErrorMsg
+
+" Git Signs
+hi! link GitSignsAdd DiffAdd
+hi! link GitSignsAddLn DiffAdd
+hi! link GitSignsAddNr DiffAdd
+hi! link GitSignsChange DiffChange
+hi! link GitSignsChangeLn DiffChange
+hi! link GitSignsChangeNr DiffChange
+hi! link GitSignsDelete DiffDelete
+hi! link GitSignsDeleteLn DiffDelete
+hi! link GitSignsDeleteNr DiffDelete
 
 " HAML
 hi! link hamlId      Title
@@ -255,6 +276,27 @@ hi! link markdownCodeBlock         Todo
 hi! link markdownCode              markdownCodeBlock
 hi! link markdownListMarker        Keyword
 hi! link markdownOrderedListMarker Keyword
+hi markdownBold guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi markdownBoldDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
+hi markdownBoldItalicDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
+hi markdownCodeDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
+hi! link markdownH1 mkdHeading
+hi! link markdownH1Delimiter markdownHeadingDelimiter
+hi! link markdownH2 mkdHeading
+hi! link markdownH3 mkdHeading
+hi! link markdownH4 mkdHeading
+hi markdownHeadingDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=underline cterm=underline
+hi! link markdownItalic mkItalic
+hi markdownItalicDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
+hi markdownLinkDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
+hi markdownLinkText guifg=fg ctermfg=fg guibg=NONE ctermbg=NONE
+hi markdownLinkTextDelimiter guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
+hi markdownUrl guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=underline cterm=underline
+hi markdownUrl guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=underline cterm=underline
+hi mkCode guifg=fg ctermfg=fg guibg=NONE ctermbg=NONE
+hi mkHeading guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=underline cterm=underline
+hi mkItalic guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi! link mkdCodeDelimiter mkCode
 
 " NERDTree
 hi! link NERDTreeRO       Notice
@@ -319,6 +361,10 @@ hi! link typescriptLogicSymbols Operator
 hi! link typescriptIdentifier   Keyword
 hi! link typescriptExceptions   Keyword
 
+" Treesitter Context
+hi! link TreesitterContext Pmenu
+hi TreesitterContextBottom gui=underline cterm=underline
+
 " Vimscript
 hi! link vimGroup        Constant
 hi! link vimHiGroup      Constant
@@ -379,12 +425,10 @@ call s:Color("SpellBad", s:red, "NONE", s:t_red, "NONE", "underline")
 " Vimwiki
 hi! link VimWikiCode markdownCode
 
-" ALE
-hi! link ALEWarningSign WarningMsg
-hi! link ALEErrorSign Error
-hi! link ALEWarning WarningMsg
-hi! link ALEError Error
-
 " Fugitive
 call s:Color("FugitiveblameHash", s:yellow, "NONE", s:t_yellow, "NONE")
 call s:Color("FugitiveblameTime", s:turqoise, "NONE", s:t_turqoise, "NONE")
+
+" Telescope
+call s:Color("TelescopeMatching", s:yellow, "NONE", s:t_yellow, "NONE")
+
