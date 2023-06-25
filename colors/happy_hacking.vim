@@ -243,6 +243,10 @@ hi! link htmlSpecialTagName htmlTag
 hi! link htmlTagName        htmlTag
 hi! link htmlScriptTag      htmlTag
 
+" Highlight Undo
+" hi! link HighlightUndo      
+call s:Color("HighlightUndo", s:black1, s:blue, s:t_blue, s:t_black1)
+
 " Inko
 call s:Color("inkoCommentBold", s:gray4, "NONE", s:t_gray4, "NONE", "bold")
 call s:Color("inkoCommentItalic", s:gray4, "NONE", s:t_gray4, "NONE", "italic")
