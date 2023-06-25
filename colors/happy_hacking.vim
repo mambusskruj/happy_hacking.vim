@@ -212,6 +212,10 @@ hi DirvishPathTail guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=bold cter
 " Dot (GraphViz)
 hi! link dotKeyChar Normal
 
+" Flash
+call s:Color("FlashLabel", s:blue, "NONE", s:t_blue, "NONE")
+
+
 " Git commits
 hi! link gitCommitSummary  String
 hi! link gitCommitOverflow ErrorMsg
